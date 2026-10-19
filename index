@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>भूपथा: गांवों के लिए डिजिटल बलि सेवा</title>
+    <!-- Tailwind CSS for modern, fast styling -->
+    <script src="https://tailwindcss.com"></script>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Serif Devanagari', sans-serif;
+            background-color: #fcfbf7;
+        }
+        .hindi-title {
+            font-family: 'Noto Serif Devanagari', serif;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="bg-amber-900 text-white py-4 px-6 shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="text-center sm:text-left">
+                <h1 class="text-3xl font-bold tracking-wide hindi-title text-amber-300">भूपथा (BhuPatha)</h1>
+                <p class="text-xs uppercase tracking-widest text-amber-100 mt-1">भूमिहारों के लिए भूमिहार - आपकी पवित्र परंपरा, हमारा पेशेवर ध्यान</p>
+            </div>
+            <a href="#booking-form" class="bg-amber-500 hover:bg-amber-600 text-amber-950 font-bold px-6 py-2.5 rounded-full shadow-lg transition duration-300 text-sm">
+                अभी बुकिंग करें (Book Now)
+            </a>
+        </div>
+    </header>
+
+    <!-- Promotional Offers Banner -->
+    <div class="bg-amber-100 border-b border-amber-200 py-3 px-4 text-center">
+        <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4 text-sm font-semibold text-amber-900">
+            <div>🔥 <span class="bg-amber-200 px-2 py-0.5 rounded text-amber-950">BHUMIHAR26</span> या <span class="bg-amber-200 px-2 py-0.5 rounded text-amber-950">BAGAUCHHIA26</span> कोड का उपयोग कर पाएं विशेष अर्ली ऑफर!</div>
+            <div class="hidden md:inline">|</div>
+            <div>🐐 विशेष आध्यात्मिक कॉम्बो: <span class="text-red-700">3 पाठा बुक करें, केवल 2 के लिए भुगतान करें!</span></div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left Column: Poster Display -->
+        <section class="lg:col-span-5 flex flex-col items-center">
+            <div class="bg-white p-4 rounded-2xl shadow-xl border border-amber-100 max-w-sm w-full">
+                <h2 class="text-center font-bold text-amber-900 mb-3 text-lg hindi-title">हमारी सेवा नियमावली</h2>
+                <!-- Placeholder for your generated image -->
+                <div class="bg-amber-50 rounded-xl overflow-hidden border-2 border-dashed border-amber-300 flex items-center justify-center relative min-h-[500px]">
+                    <!-- Link the image here -->
+                    <img src="image_bO5qbs.png" alt="BhuPatha Service Poster" class="w-full h-auto object-cover rounded-xl" onerror="this.style.display='none'; document.getElementById('poster-placeholder').style.display='flex';">
+                    
+                    <!-- Fallback if the file path is not set up correctly yet -->
+                    <div id="poster-placeholder" class="hidden absolute inset-0 p-6 flex-col justify-center items-center text-center text-amber-800">
+                        <svg class="w-16 h-16 mb-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <p class="font-bold mb-2 text-md">पोस्टर इमेज यहाँ रखें</p>
+                        <p class="text-xs text-amber-700">कृपया डाउनलोड की गई इमेज का नाम <code class="bg-amber-200 px-1 rounded text-amber-950 font-mono">image_bO5qbs.png</code> रखकर इसी फोल्डर में सुरक्षित करें।</p>
+                    </div>
+                </div>
+                <p class="text-center text-xs text-gray-500 mt-3 italic">पोस्टर को सोशल मीडिया या व्हाट्सएप पर शेयर करने के लिए सेव करें।</p>
+            </div>
+        </section>
+
+        <!-- Right Column: Booking System Form -->
+        <section id="booking-form" class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-amber-100">
+            <h2 class="text-2xl font-bold text-amber-950 mb-2 hindi-title border-b pb-3 border-amber-100 flex items-center gap-2">
+                <span>📋</span> सेवा बुकिंग फॉर्म (Service Registration)
+            </h2>
+            
+            <form class="space-y-5 mt-6" onsubmit="alert('भूपथा सेवा चुनने के लिए धन्यवाद! आपकी बुकिंग प्रक्रिया शुरू कर दी गई है। हमारी टीम जल्द ही आपसे संपर्क करेगी।'); return false;">
+                
+                <!-- Service Type Selection -->
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">सेवा का प्रकार चुनें (Select Service Type)</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <label class="border-2 border-amber-200 rounded-xl p-4 flex items-start gap-3 cursor-pointer hover:bg-amber-50/50 transition">
+                            <input type="radio" name="service_type" value="doorstep" class="mt-1 accent-amber-700" checked>
+                            <div>
+                                <span class="block font-bold text-amber-950 text-sm">घर पे सेवा (Doorstep Service)</span>
+                                <span class="text-xs text-gray-500">हमारी टीम आपकी चुनी हुई जगह पर आकर पूर्ण स्वच्छता के साथ काम करेगी।</span>
+                            </div>
+                        </label>
+                        <label class="border-2 border-amber-200 rounded-xl p-4 flex items-start gap-3 cursor-pointer hover:bg-amber-50/50 transition">
+                            <input type="radio" name="service_type" value="hub" class="mt-1 accent-amber-700">
+                            <div>
+                                <span class="block font-bold text-amber-950 text-sm">हब सेवा (Village Hub Service)</span>
+                                <span class="text-xs text-gray-500">आप पाठा हमारे निकटतम हाइजीनिक हब केंद्र पर लाएं, तैयार होने पर ले जाएं।</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Personal Info Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">पूरा नाम (Full Name)</label>
+                        <input type="text" required placeholder="अपना नाम लिखें" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-amber-600">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">मोबाइल नंबर (Mobile Number)</label>
+                        <input type="tel" required placeholder="10 अंकों का नंबर" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-amber-600">
+                    </div>
+                </div>
+
+                <!-- Address Input -->
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">गाँव / कस्बा और पूरा पता (Village Name & Address)</label>
+                    <textarea rows="2" required placeholder="अपना पूरा पता यहाँ दर्ज करें ताकि टीम आसानी से पहुँच सके" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-amber-600"></textarea>
+                </div>
+
+                <!-- Quantity & Combo Info -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center bg-amber-50/50 p-4 rounded-xl border border-amber-100">
+                    <div>
+                        <label class="block text-xs font-semibold text-amber-900 uppercase mb-1">पाठा की संख्या (Number of Patha)</label>
+                        <select class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-amber-600 font-semibold">
+                            <option value="1">1 पाठा (Standard Rate)</option>
+                            <option value="2">2 पाठा</option>
+                            <option value="3">3 पाठा (विशेष कॉम्बो ऑफर: 3 पाठा का काम 2 के रेट में!)</option>
+                            <option value="4">4 या अधिक</option>
+                        </select>
+                    </div>
+                    <div class="text-xs text-amber-800">
+                        💡 <span class="font-bold text-amber-950">नोट:</span> 3 पाठा सेलेक्ट करने पर स्वचालित रूप से <span class="font-bold text-red-700">"Pay for 2"</span> का डिस्काउंट बिलिंग के समय लागू कर दिया जाएगा।
+                    </div>
+                </div>
+
+                <!-- Coupon Engine -->
+                <div>
+                    <label class="block text-xs font-semibold text-gray-600 uppercase mb-1">कूपन कोड दर्ज करें (Apply Coupon Code)</label>
+                    <div class="flex gap-2">
+                        <input type="text" placeholder="उदाहरण: BHUMIHAR26" class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-amber-600 font-mono uppercase tracking-wider">
+                        <button type="button" onclick="alert('कूपन कोड सफलतापूर्वक लागू हो गया है!')" class="bg-amber-950 text-white font-semibold text-xs px-4 rounded-lg hover:bg-amber-900 transition whitespace-nowrap">लागू करें (Apply)</button>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
